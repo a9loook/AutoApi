@@ -6,7 +6,7 @@ from base64 import b64encode
 from nacl import encoding, public
 
 app_num=os.getenv('APP_NUM')
-if app_num == None:
+if app_num == '':
     app_num='1'
 gh_token=os.getenv('GH_TOKEN')
 gh_repo=os.getenv('GH_REPO')
