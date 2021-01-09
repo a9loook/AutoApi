@@ -4,7 +4,7 @@ import requests as req
 import json,sys,time,random
 
 app_num=os.getenv('APP_NUM')
-if app_num == None:
+if app_num == '':
     app_num = '1'
 access_token_list=['wangziyingwen']*int(app_num)
 #配置选项，自由选择
