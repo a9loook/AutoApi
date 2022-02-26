@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta name="google-site-verification" content="AclyhO0-4dQY20g3Gg0upVsjbwhQM1qb6931iglmiz4" />
+<meta name="baidu-site-verification" content="oNr0cepQ3M" />
+
+<style>
+#christmas {
+
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  /* iOS hack for border radius bleed with transforms */
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+}
+#christmas .ground {
+  -moz-border-radius-topright: 130px 40px;
+  -webkit-border-top-right-radius: 130px 40px;
+  border-top-right-radius: 130px 40px;
+  position: absolute;
+  width: 133px;
+  height: 61px;
+  left: 0;
+  bottom: 0;
+}
+#christmas .ground:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  content: " ";
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  top: 10px;
+  right: -60px;
+  background: white;
+}
+#christmas .ground:after {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  content: " ";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 5px;
+  right: -75px;
+  background: white;
+}
+#christmas .tree {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #23915b transparent;
+}
+#christmas .tree:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #23915b transparent;
+}
+#christmas .tree:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #23915b transparent;
+}
+#christmas .tree.left {
+  left: 28px;
+  bottom: 78px;
+  border-width: 0 18px 24px 18px;
+}
+#christmas .tree.left:before {
+  top: 10px;
+  left: -21px;
+  border-width: 0 21px 28px 21px;
+}
+#christmas .tree.left:after {
+  top: 22px;
+  left: -24px;
+  border-width: 0 24px 32px 24px;
+}
+#christmas .tree.left .snow {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: -2px 2px 0 0 white, 2px 2px 0 0 white, -3px 3px 0 0 white, 3px 3px 0 0 white, -12px 14px 0 0 white, -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
+  -webkit-box-shadow: -2px 2px 0 0 white, 2px 2px 0 0 white, -3px 3px 0 0 white, 3px 3px 0 0 white, -12px 14px 0 0 white, -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
+  box-shadow: -2px 2px 0 0 white, 2px 2px 0 0 white, -3px 3px 0 0 white, 3px 3px 0 0 white, -12px 14px 0 0 white, -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
+  position: absolute;
+  top: 1px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  z-index: 1;
+}
+#christmas .tree.left .snow:after {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: -14px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, 18px 22px 0 1px white, 21px 25px 0 0 white, -2px 27px 0 1px white;
+  -webkit-box-shadow: -14px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, 18px 22px 0 1px white, 21px 25px 0 0 white, -2px 27px 0 1px white;
+  box-shadow: -14px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, 18px 22px 0 1px white, 21px 25px 0 0 white, -2px 27px 0 1px white;
+  content: " ";
+  position: absolute;
+  top: 14px;
+  left: 0px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  z-index: 1;
+}
+#christmas .tree.right {
+  left: 60px;
+  bottom: 45px;
+  border-width: 0 18px 24px 18px;
+}
+#christmas .tree.right:before, #christmas .tree.right:after {
+  display: none;
+}
+#christmas .tree.right .snow {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: -1px 2px 0 0 white, -2px 3px 0 0 white, 2px 2px 0 0 white, 3px 3px 0 0 white, 4px 4px 0 0 white, 6px 6px 0 0 white, 6px 15px 0 0 white, 8px 16px 0 0 white, 10px 16px 0 0 white, 11px 16px 0 0 white, -5px 13px 0 0 white, -7px 12px 0 0 white;
+  -webkit-box-shadow: -1px 2px 0 0 white, -2px 3px 0 0 white, 2px 2px 0 0 white, 3px 3px 0 0 white, 4px 4px 0 0 white, 6px 6px 0 0 white, 6px 15px 0 0 white, 8px 16px 0 0 white, 10px 16px 0 0 white, 11px 16px 0 0 white, -5px 13px 0 0 white, -7px 12px 0 0 white;
+  box-shadow: -1px 2px 0 0 white, -2px 3px 0 0 white, 2px 2px 0 0 white, 3px 3px 0 0 white, 4px 4px 0 0 white, 6px 6px 0 0 white, 6px 15px 0 0 white, 8px 16px 0 0 white, 10px 16px 0 0 white, 11px 16px 0 0 white, -5px 13px 0 0 white, -7px 12px 0 0 white;
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  background: white;
+}
+#christmas .flake {
+  -webkit-animation: snow infinite linear 2s;
+  -moz-animation: snow infinite linear 2s;
+  -ms-animation: snow infinite linear 2s;
+  -o-animation: snow infinite linear 2s;
+  animation: snow infinite linear 2s;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+@-webkit-keyframes snow {
+  0% {
+    -moz-transform: translateY(-1500px);
+    -ms-transform: translateY(-1500px);
+    -webkit-transform: translateY(-1500px);
+    transform: translateY(-1500px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes snow {
+  0% {
+    -moz-transform: translateY(-1500px);
+    -ms-transform: translateY(-1500px);
+    -webkit-transform: translateY(-1500px);
+    transform: translateY(-1500px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+  }
+}
+@-ms-keyframes snow {
+  0% {
+    -moz-transform: translateY(-1500px);
+    -ms-transform: translateY(-1500px);
+    -webkit-transform: translateY(-1500px);
+    transform: translateY(-1500px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+  }
+}
+@keyframes snow {
+  0% {
+    -moz-transform: translateY(-1500px);
+    -ms-transform: translateY(-1500px);
+    -webkit-transform: translateY(-1500px);
+    transform: translateY(-1500px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+  }
+}
+</style>
+<script type="text/javascript" nonce="01ea939a89834a6791290bc354d" src="//local.adguard.org?ts=1645848054348&amp;type=content-script&amp;dmn=51.ruyo.net&amp;pth=%2F15646.html&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;uag="></script>
+<script type="text/javascript" nonce="01ea939a89834a6791290bc354d" src="//local.adguard.org?ts=1645848054348&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="Bookmark" href="https://51.ruyo.net/favicon.ico" />
+<link rel="shortcut icon" href="https://51.ruyo.net/favicon.ico" />
+<title>利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订 &#045; 教程资源|网络资源|首页不显示 &#45; 如有乐享</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://51.ruyo.net/xmlrpc.php" />
+<link rel="canonical" href="https://51.ruyo.net/15646.html" />
+<link href="https://51.ruyo.net/wp-content/themes/dmeng2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://51.ruyo.net/wp-content/themes/dmeng2.0/css/dmeng-2.0.7.1.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="https://51.ruyo.net/wp-content/themes/dmeng2.0/js/html5shiv-3.7.0.js"></script><script src="https://51.ruyo.net/wp-content/themes/dmeng2.0/js/respond-1.4.2.min.js"></script><![endif]-->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="如有乐享 &raquo; 利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订评论Feed" href="https://51.ruyo.net/15646.html/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/51.ruyo.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='yarppWidgetCss-css'  href='https://51.ruyo.net/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-css'  href='https://51.ruyo.net/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-github-css'  href='https://51.ruyo.net/wp-content/plugins/crayon-syntax-highlighter/themes/github/github.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-courier-new-css'  href='https://51.ruyo.net/wp-content/plugins/crayon-syntax-highlighter/fonts/courier-new.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://51.ruyo.net/wp-includes/css/dist/block-library/style.min.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-postratings-css'  href='https://51.ruyo.net/wp-content/plugins/wp-postratings/css/postratings-css.css?ver=1.86.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://51.ruyo.net/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://51.ruyo.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/51.ruyo.net\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://51.ruyo.net/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<link rel='https://api.w.org/' href='https://51.ruyo.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://51.ruyo.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://51.ruyo.net/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='免费申请Microsoft 365 E5开发者试用订阅教程' href='https://51.ruyo.net/16002.html' />
+<link rel='next' title='Air Explorer：全球各大网盘服务之间文件同步工具' href='https://51.ruyo.net/16019.html' />
+<link rel='shortlink' href='https://51.ruyo.net/?p=15646' />
+<link rel="alternate" type="application/json+oembed" href="https://51.ruyo.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2F51.ruyo.net%2F15646.html" />
+<link rel="alternate" type="text/xml+oembed" href="https://51.ruyo.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2F51.ruyo.net%2F15646.html&#038;format=xml" />
+<meta name="keywords" content="E5订阅试用,E5试用订阅,E5试用订阅续订,Github,Github Action,Github Actions,Microsoft,Microsoft 365,Microsoft 365 E5 Developer,Microsoft 365 E5 Developer Trial,Microsoft 365 E5 续订,Microsoft 365 E5 试用,Microsoft API,Office 365 E3 试用,Office 365 开发者,微软,教程资源,网络资源,首页不显示" /><meta name="description" content="No related posts." />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<script type="text/javascript">var ajaxurl = 'https:\/\/51.ruyo.net\/wp-admin\/admin-ajax.php';var isUserLoggedIn = 0;var loginUrl = 'https:\/\/51.ruyo.net\/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html';var dmengPath = 'https:\/\/51.ruyo.net\/wp-content\/themes\/dmeng2.0/';var dmengTracker = {"type":"single","pid":15646};</script><script src="https://51.ruyo.net/wp-content/themes/dmeng2.0/js/bootstrap.min.js"></script><script src="https://51.ruyo.net/wp-content/themes/dmeng2.0/js/dmeng-2.0.7.1.js"></script>
+
+
+
+<!--百度熊掌号添加JSON_LD数据-->
+<script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://51.ruyo.net/15646.html",
+        "appid": "1584293044929457",
+        "title": "利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订",
+        "images": [
+            "https://51.ruyo.net/wp-content/uploads/2018/01/ruyo.net_.64.png"
+            ],
+        "description": "",
+        "pubDate": "2020-06-10T16:34:25"
+    }
+</script>
+<script src="//msite.baidu.com/sdk/c.js?appid=1584293044929457"></script>
+</head>
+<body class="post-template-default single single-post postid-15646 single-format-standard">
+<header id="masthead" itemscope itemtype="http://schema.org/WPHeader">
+	<div class="container header-content"><div class="row"><div class="col-lg-8 col-md-7 col-sm-6 col-xs-12"><div class="header-logo"><a href="https://51.ruyo.net/" rel="home"><img src="https://51.ruyo.net/wp-content/uploads/2018/01/ruyo.net_.64.png" width="64" height="64" alt="如有乐享" /></a></div><div class="header-text"><div class="name"><a href="https://51.ruyo.net/" rel="home" id="name">如有乐享</a></div><div class="description" id="desc">分享是一种美德，是一种态度。</div></div></div><div class="col-lg-4 col-md-5 col-sm-6 col-xs-12"><div class="header-profile"><ul class="user-profile"><li>2022年02月26日，星期六</li><li class="tabs">登录：<a href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html" class="wordpress" rel="nofollow">本地账号</a></li></ul></div></div></div></div>	<div class="navbar navbar-default navbar-static-top" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-navbar-collapse"><span class="sr-only">切换菜单</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="https://51.ruyo.net/" rel="home" itemprop="headline">如有乐享</a>			</div>
+			<nav id="navbar" class="collapse navbar-collapse header-navbar-collapse" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<ul class="nav navbar-nav"><li><a href="https://51.RUYO.net/" itemprop="url">首页</a></li><li class="dropdown"><a href="https://51.ruyo.net/category/vps/" data-toggle="dropdown" class="dropdown-toggle" itemprop="url">云服务 <span class="caret"></span></a></a><ul class="dropdown-menu" role="menu"><li><a href="https://51.ruyo.net/category/vps/" itemprop="url">云服务器</a></li><li><a href="https://51.ruyo.net/category/vps/zhujipingce/" itemprop="url">主机评测</a></li><li><a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90/domain/" itemprop="url">域名优惠</a></li><li><a href="https://51.ruyo.net/tag/oracle-cloud/" itemprop="url"><span class="glyphicon glyphicon-fire"></span>甲骨文云</a></li></ul></li><li class="dropdown"><a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90/" data-toggle="dropdown" class="dropdown-toggle" itemprop="url">网络资源 <span class="caret"></span></a></a><ul class="dropdown-menu" role="menu"><li><a href="https://51.ruyo.net/category/jiaocheng/" itemprop="url">教程资源</a></li><li><a href="https://51.ruyo.net/category/jishu/" itemprop="url">技术分享</a></li><li><a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90/youxiang/" itemprop="url">邮箱资源</a><li class="divider"></li><li><a href="https://51.ruyo.net/tag/edu%e9%82%ae%e7%ae%b1/" itemprop="url">教育邮箱</a></li></li><li><a href="https://51.ruyo.net/tag/%e5%a2%83%e5%a4%96%e7%94%b5%e8%af%9d%e5%8d%a1/" itemprop="url">国外号码</a></li><li><a href="https://51.ruyo.net/?s=%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81" itemprop="url">学生认证</a></li><li><a href="https://51.ruyo.net/tag/windows%e6%bf%80%e6%b4%bb%e4%b9%8b%e8%b7%af/" itemprop="url">Windows激活</a></li><li><a href="https://51.ruyo.net/tag/onedrive/" itemprop="url">OneDrive</a></li></ul></li><li><a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e6%b4%bb%e5%8a%a8/" itemprop="url">活动线报</a></li><li><a href="https://51.ruyo.net/category/%e8%bd%af%e4%bb%b6/" itemprop="url">软件推荐</a></li><li class="dropdown"><a href="http://51.RUYO.net" data-toggle="dropdown" class="dropdown-toggle" itemprop="url">小工具 <span class="caret"></span></a></a><ul class="dropdown-menu" role="menu"><li><a target="_blank" href="https://51.ruyo.net/test/duanlian.html" itemprop="url">短链服务</a></li><li><a target="_blank" href="https://51.ruyo.net/test/download_xshell_xftp.html" itemprop="url">Xshell下载</a></li><li><a target="_blank" href="https://jiketuchuang.com" itemprop="url">即刻图床扩展</a></li><li><a target="_blank" href="https://51.ruyo.net/test/ximalaya-vip.html" itemprop="url">喜马拉雅会员</a></li></ul></li></ul><!-- cached 2022-02-26 11:35:31 --><ul class="nav navbar-nav navbar-right"><li><a href="http://51.ruyo.net/feed" itemprop="url"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>订阅</a></li><li><a href="https://51.ruyo.net/about/" itemprop="url"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>关于</a></li><li><a href="https://51.ruyo.net/%e7%94%a8%e6%88%b7%e6%8a%95%e7%a8%bf/" itemprop="url"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>投稿</a></li></ul><!-- cached 2022-02-26 11:35:31 -->			<form class="navbar-form navbar-left" role="search" method="get" id="searchform" action="https://51.ruyo.net/">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="搜索 &hellip;" name="s" id="s" required>
+				</div>
+				<button type="submit" class="btn btn-default" id="searchsubmit"><span class="glyphicon glyphicon-search"></span></button>
+			</form>
+			</nav><!-- #navbar -->
+		</div>
+	</div>
+</header><!-- #masthead -->
+<div id="main" class="container" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+	<div class="row">
+					<article id="content" class="col-lg-8 col-md-8 single" data-post-id="15646" role="article" itemscope itemtype="http://schema.org/Article">
+					<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="entry-header page-header">
+						<h1 class="entry-title h3" itemprop="name">利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订</h1>
+						<div class="entry-meta">
+	<div class="entry-set-font"><span id="set-font-small" class="disabled">A<sup>-</sup></span><span id="set-font-big">A<sup>+</sup></span></div>
+	<span class="glyphicon glyphicon-user"></span> <a href="https://51.ruyo.net/author/admin/" itemprop="author">我是小马甲~</a>
+	<span class="glyphicon glyphicon-time"></span> <time class="entry-date" datetime="2020-06-10T16:34:25+00:00"  itemprop="datePublished">2020年6月10日</time>
+	<span class="glyphicon glyphicon-comment"></span> <a href="https://51.ruyo.net/15646.html#comments" itemprop="discussionUrl" itemscope itemtype="http://schema.org/Comment"><span itemprop="interactionCount">55</span></a>
+	<span class="glyphicon glyphicon-eye-open"></span> 26227 次浏览<span class="glyphicon glyphicon-folder-open"></span> <a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90/jiaocheng/" rel="category" itemprop="articleSection">教程资源</a> | <a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90/" rel="category" itemprop="articleSection">网络资源</a> | <a href="https://51.ruyo.net/category/not-show-homepage/" rel="category" itemprop="articleSection">首页不显示</a><span itemprop="keywords"><span class="glyphicon glyphicon-tags"></span> <a href="https://51.ruyo.net/tag/e5%e8%ae%a2%e9%98%85%e8%af%95%e7%94%a8/" rel="tag">E5订阅试用</a> | <a href="https://51.ruyo.net/tag/e5%e8%af%95%e7%94%a8%e8%ae%a2%e9%98%85/" rel="tag">E5试用订阅</a> | <a href="https://51.ruyo.net/tag/e5%e8%af%95%e7%94%a8%e8%ae%a2%e9%98%85%e7%bb%ad%e8%ae%a2/" rel="tag">E5试用订阅续订</a> | <a href="https://51.ruyo.net/tag/github/" rel="tag">Github</a> | <a href="https://51.ruyo.net/tag/github-action/" rel="tag">Github Action</a> | <a href="https://51.ruyo.net/tag/github-actions/" rel="tag">Github Actions</a> | <a href="https://51.ruyo.net/tag/microsoft/" rel="tag">Microsoft</a> | <a href="https://51.ruyo.net/tag/microsoft-365/" rel="tag">Microsoft 365</a> | <a href="https://51.ruyo.net/tag/microsoft-365-e5-developer/" rel="tag">Microsoft 365 E5 Developer</a> | <a href="https://51.ruyo.net/tag/microsoft-365-e5-developer-trial/" rel="tag">Microsoft 365 E5 Developer Trial</a> | <a href="https://51.ruyo.net/tag/microsoft-365-e5-%e7%bb%ad%e8%ae%a2/" rel="tag">Microsoft 365 E5 续订</a> | <a href="https://51.ruyo.net/tag/microsoft-365-e5-%e8%af%95%e7%94%a8/" rel="tag">Microsoft 365 E5 试用</a> | <a href="https://51.ruyo.net/tag/microsoft-api/" rel="tag">Microsoft API</a> | <a href="https://51.ruyo.net/tag/office-365-e3-%e8%af%95%e7%94%a8/" rel="tag">Office 365 E3 试用</a> | <a href="https://51.ruyo.net/tag/office-365-%e5%bc%80%e5%8f%91%e8%80%85/" rel="tag">Office 365 开发者</a> | <a href="https://51.ruyo.net/tag/%e5%be%ae%e8%bd%af/" rel="tag">微软</a></span></div>
+							</div>
+					<div class="entry-content"  itemprop="articleBody">
+						<div class="article_index"><h5>文章目录<span class="caret"></span></h5><ul><li><a href="#1">准备工作</a></li><li><a href="#2">开源项目</a></li><li><a href="#3">操作步骤</a><ul><li><a href="#4">申请试用</a></li><li><a href="#5">获取Token</a></li><li><a href="#6">克隆项目</a></li><li><a href="#7">配置参数</a></li><li><a href="#8">测试运行</a></li></ul></li><li><a href="#9">最后说明</a></li><li><a href="#10">Github Action</a></li><li><a href="#11">参考文献</a></li></ul></div><p><img class="alignnone" src="https://pic.rmb.bdstatic.com/bjh/c260c91a4d6bfe7139b72fb83b20e2bb.png" alt="利用Github Action刷Microsoft 365 E5开发者订阅API实现续订" width="500" height="300" /></p>
+<p>昨天又介绍了一次E5试用订阅！目前已知的经常使用Microsoft 365 API能实现订阅的续订！</p>
+<p>本文介绍一下不用“充元宝”，全靠手打的，散人全自动刷API方案！！</p>
+<p>原理：利用免费的Github Action 定期刷 Microsoft 365 API！不用服务器搭建！</p>
+<div class="alert alert-warning" role="alert"><span style="color: #ff0000;"><strong>本文的方法不能100%保证试用订阅能续订！！介意者请绕道哈！！</strong></span></div>
+<p>&nbsp;</p>
+<h2 id="1">准备工作</h2>
+<p>1）E5管理账号</p>
+<p>2）Github账号（不建议用常用账号）</p>
+<p>3）记事本（用于记录ID密码！）</p>
+<p>&nbsp;</p>
+<h2 id="2">开源项目</h2>
+<p><a href="https://github.com/wangziyingwen/AutoApiSecret" target="_blank" rel="noopener">https://github.com/wangziyingwen/AutoApiSecret</a></p>
+<p>项目说明中有完整的教程！博主按照教程撸了一遍！然后补全图片和完善文案！</p>
+<p>&nbsp;</p>
+<h2 id="3">操作步骤</h2>
+<h3 id="4">申请试用</h3>
+<p>移步文章：<a href="https://51.ruyo.net/16002.html" rel="bookmark">免费申请Microsoft 365 E5开发者试用订阅教程 </a></p>
+<p>&nbsp;</p>
+<h3 id="5">获取Token</h3>
+<p>这里介绍完全自己！</p>
+<p>1）前往 <span class="external-link"><a href="/go/index.html?u=https://portal.azure.com/#home" target="_blank" rel="noopener">https://portal.azure.com/</a> 登陆E5管理账号</span>注册应用。</p>
+<p><strong>首页找到【Azure Active Directory】（如果没有可以搜索）然后点击【应用注册】-&gt; 【+新注册】！</strong></p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/02d71730c6d3127bad103dd7c88c83da.png" width="710" height="494" /></p>
+<p>&nbsp;</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/01e0c00051e1c9f1d7d21ea512c0c7ea.png" width="710" height="472" /></p>
+<p>&nbsp;</p>
+<p>2）【名称】 随便填写，受支持的账户类型 选择【<strong>任何组织目录(任何 Azure AD 目录 &#8211; 多租户)中的帐户】</strong></p>
+<p>【重定向URI】填写：http://localhost:53682/</p>
+<p>然后点击【注册】</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/a97d9c17cc21038cf4fd6410210a21aa.png" width="708" height="611" /></p>
+<p>&nbsp;</p>
+<p>3）注册成功后，将【应用程序(客户端)ID】记录下来，后面会用到！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/05c91736bd458252d4fad1d67b3f2ff3.png" width="742" height="541" /></p>
+<p>&nbsp;</p>
+<p>4）点击左侧菜单【API权限】-&gt; 【添加权限】 -&gt; 【Microsoft Graph】-&gt; 选中【委托的权限】</p>
+<p>以下权限分别搜索勾选！勾选完点击按钮【添加权限】</p>
+<p><strong>Files.Read.All      Files.ReadWrite.All </strong></p>
+<p><strong>Sites.Read.All      Sites.ReadWrite.All</strong></p>
+<p><strong>User.Read.All      User.ReadWrite.All </strong></p>
+<p><strong>Directory.Read.All      Directory.ReadWrite.All</strong></p>
+<p><strong>Mail.Read      Mail.ReadWrite </strong></p>
+<p><strong>MailboxSettings.Read      MailboxSettings.ReadWrite</strong></p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/1b1cb013b6b7477a1b4c409a24c45379.png" width="817" height="641" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>5）在API权限页面，如果界面上有【代表xxx授予管理员同意】按钮，一定要点一下，然后同意授权！</p>
+<p>如果没有这个按钮，就不用管了！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/846189e6a636dc4f300a814696621d05.png" width="762" height="528" /></p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/e3469d880e4f0c5fb60426bc7cda1f83.png" width="780" height="396" /></p>
+<p>&nbsp;</p>
+<p>6）点击左侧菜单【证书和密码】-&gt; 【+新客户端密码】</p>
+<p>【说明】随便填，【截止期限】随便选！点击【添加】按钮。</p>
+<p>然后页面下方可见新建的密码，然后将【值】复制记录下来！后面会用到！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/384eaf1a8e2c21d490fa271af05e57ba.png" width="763" height="540" /></p>
+<p>&nbsp;</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/0eca14a52583c92c011379164a807e49.png" width="763" height="202" /></p>
+<p>&nbsp;</p>
+<p>7）我们利用rclone来获取Token!</p>
+<p>下载rclone（【<a href="/go/index.html?u=https://wvvw.imfast.io/rclone.exe" target="_blank" rel="noopener">rclone下载地址1</a>】【<a href="/go/index.html?u=ftp://192.99.11.204/rclone.exe" target="_blank" rel="noopener">rclone下载地址2</a>】）到电脑某个盘符下，在rclone.exe同目录中，按Shift+鼠标右键，选择在【此处打开cmd窗口】或【在此处打开power shell窗口】</p>
+<p>然后在弹出执行命令！</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-6219a80dba45c936850175" class="crayon-syntax crayon-theme-github crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; margin-left: 12px; margin-right: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-6219a80dba45c936850175-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-6219a80dba45c936850175-1"><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-e">rclone </span><span class="crayon-i">authorize</span><span class="crayon-h"> </span><span class="crayon-s">"onedrive"</span><span class="crayon-h"> </span><span class="crayon-s">"应用程序(客户端)ID"</span><span class="crayon-h"> </span><span class="crayon-s">"应用程序密码"</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>本文演示的ID和密码！</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-6219a80dba46b860864407" class="crayon-syntax crayon-theme-github crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; margin-left: 12px; margin-right: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-6219a80dba46b860864407-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-6219a80dba46b860864407-1"><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-e">rclone </span><span class="crayon-i">authorize</span><span class="crayon-h"> </span><span class="crayon-s">"onedrive"</span><span class="crayon-h"> </span><span class="crayon-s">"c33b7c34-2d87-4b89-89f0-469d6e78a55e"</span><span class="crayon-h"> </span><span class="crayon-s">"P~0zNhn1e._BD.6~xxxxxxx~Ced9JR3"</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>执行命令后弹出网页登陆E5管理账号，然后接受授权即可！</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/88caaf99e0140e0891e01d4e4fc37f0d.png" /></p>
+<p>&nbsp;</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/d7f39360c2c7088e4c00874a1fa3deae.png" /></p>
+<p>&nbsp;</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/dca231f1fd57293961ccab7a16d42d21.png" /></p>
+<p>&nbsp;</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/a1c8603ada17ee85481c0503e49d58a1.png" width="565" height="255" /></p>
+<p>8）授权成功后，窗口弹出得到的Token信息！复制内容</p>
+<p>仅复制 【Paste the following into your remote machine &#8212;&gt;】开头【&lt;&#8212;End paste】结尾的中间部分内容！</p>
+<p>利用搜索引擎找一个【JSON在线格式】的网站，将复制的内容格式化一下。复制refresh_token值内容！不要双引号！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/020571d9071e1aaa9778ef7de0179c79.png" width="816" height="530" /></p>
+<p>&nbsp;</p>
+<p>因为码农经常看一些JSON，我的Chrome安装了一个扩展 JSON-handle【<a href="/go/index.html?u=https://chrome.google.com/webstore/detail/json-handle/iahnhfdhidomcpggpaimmmahffihkfnj" target="_blank" rel="noopener">安装地址</a>】。很清晰看到我们要复制的内容！如图选中部分内容~！</p>
+<p>保留该token，后面要用！获取Token部分到这里结束！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/cf96d18ab30de62b6e2b2a0cf7d01b4b.png" width="819" height="524" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 id="6">克隆项目</h3>
+<p>这里利用的是Github的私有项目来做，如果你认为无所谓可以直接fork原作者的项目！然后直接跳过本节！</p>
+<p>1）登陆Github账号，新建项目（ New repository）！</p>
+<p>名称随便，可设置为私有(Private)，想公开项目也行。</p>
+<p>为了安全还是私有吧！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/20d77f26436e9b79484036c174179a50.png" width="575" height="484" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>2）项目新建成功后，我们选择Import 导入一个项目！</p>
+<p>项目地址：https://github.com/wangziyingwen/AutoApiSecret</p>
+<p>或者导入：https://github.com/malaohu/AutoApiSecret</p>
+<p>导入的过程略慢！需要多等等！</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/a26277dae76951ae46891eb8b625f830.png" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 id="7">配置参数</h3>
+<p>1）在线编辑你项目里的1.txt 文件，将整个refresh_token覆盖粘贴进去（原内容不要保留）。</p>
+<p>2）依次点击上栏 【Setting】-&gt; 【Secrets】 -&gt; 【Add a new secret】</p>
+<p>分别新建：CONFIG_ID、CONFIG_KEY</p>
+<p>替换你的ID 和 密码！一定要注意前面r 和 单引号！</p>
+<p>CONFIG_ID</p>
+<div class="highlight highlight-source-shell">
+<!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-6219a80dba470085183055" class="crayon-syntax crayon-theme-github crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; margin-left: 12px; margin-right: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-6219a80dba470085183055-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-6219a80dba470085183055-1"><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-i">r</span><span class="crayon-s">'应用程序(客户端)ID'</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+
+</div>
+<p>CONFIG_KEY</p>
+<div class="highlight highlight-source-shell">
+<!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-6219a80dba473097833624" class="crayon-syntax crayon-theme-github crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; margin-left: 12px; margin-right: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-6219a80dba473097833624-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-6219a80dba473097833624-1"><span class="crayon-v">secret</span><span class="crayon-o">=</span><span class="crayon-i">r</span><span class="crayon-s">'应用程序密码'</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+
+</div>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/77a4b42ecff7bc881a79a864bae13713.png" width="864" height="478" /></p>
+<p>&nbsp;</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/b4a8df2222885fb1617aa9f2e362d97c.png" width="600" height="443" /></p>
+<p>&nbsp;</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/97cdcf60d5cc492440ff0847a127c377.png" width="604" height="428" /></p>
+<p>&nbsp;</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/503aef93b6112dd50808aaec64b5667f.png" width="680" height="292" /></p>
+<p>3）打开地址：<a href="/go/index.html?u=https://github.com/settings/tokens" target="_blank" rel="noopener">https://github.com/settings/tokens</a> 点击【Generate new token】</p>
+<p>设置名字：GITHUB_TOKEN ,</p>
+<p>勾选 repo , admin:repo_hook , workflow 等选项，点击按钮【Generate token】！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/c527e37ac2b38c30aff8feac05c18888.png" width="775" height="292" /></p>
+<p>&nbsp;</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/eed579c628de7661961a745e333868e6.png" /></p>
+<p>&nbsp;</p>
+<h3 id="8">测试运行</h3>
+<p>点击一下Github项目的星星（Star）立马调用一次脚本，再点击上面的【Action】就能看到每次的运行日志，看看运行状况！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/80a4ea2c442af210dcee41dbd98eb7e6.png" width="843" height="504" /></p>
+<p>如图展示日志，说明成功啦！！<strong>3小时后再确认下是否自动运行了（ation里是否多出来几个），</strong>是的话就不用管了！</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/4561d24763217a923747cc32173d5814.png" width="737" height="440" /></p>
+<p>&nbsp;</p>
+<p><img class="" src="https://pic.rmb.bdstatic.com/bjh/3ce21cbcd55c38a6c2a904ab73473ea8.png" width="740" height="578" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 id="9">最后说明</h2>
+<p>1）复制各种ID，密码，Token的时候一定要多注意！多个空格，少个标点符号都导致无法运行！</p>
+<p>2）项目设定每3小时自动运行一次，每次调用3轮。定时自动启动修改地方文件 .github/workflow/AutoApiSecret.yml（自行百度cron定时任务格式，最短每5分钟一次）私有仓库有限制谨慎修改！</p>
+<p>3）无论怎么刷API也不能100%保证能续订服务！！！</p>
+<p>4）自动运行会更新1.txt文件，会生成好多无用的提交记录，可能影响使用Github!</p>
+<p>&nbsp;</p>
+<h2 id="10">Github Action</h2>
+<p>Github Action 提供的虚拟环境： 2core CPU · 7 GB RAM 内存 · 14 GB SSD 硬盘空间</p>
+<p>使用限制：</p>
+<ul>
+<li>每个仓库只能同时支持20个 workflow 并行。</li>
+<li>每小时可以调用1000次 GitHub API 。</li>
+<li>每个 job 最多可以执行6个小时。</li>
+<li>免费版的用户最大支持20个 job 并发执行，macOS 最大只支持5个。</li>
+<li><span style="color: #ff0000;"><strong>私有仓库每月累计使用时间为2000分钟，超过后$ 0.008/分钟，公共仓库则无限制。</strong></span></li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="11">参考文献</h2>
+<p><a href="https://blog.432100.xyz/index.php/archives/50/" target="_blank" rel="noopener">https://blog.432100.xyz/index.php/archives/50/</a></p>
+<p><a href="https://github.com/features/actions" target="_blank" rel="noopener">https://github.com/features/actions</a></p>
+<p>&nbsp;</p>
+<div class='yarpp-related yarpp-related-none'>
+<p>No related posts.</p>
+</div>
+											</div>
+					<div class="entry-details" itemprop="copyrightHolder" itemtype="http://schema.org/Organization" itemscope>
+			<details>
+				<summary>原文链接：<a href="https://51.ruyo.net/15646.html" rel="author">利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订</a>，转发请注明来源！</summary>
+			</details>
+	</div>				</div>
+								<div class="entry-footer clearfix" role="toolbar">
+					<div class="bd-share">
+						<div class="bdsharebuttonbox"><a class="bds_qzone" data-cmd="qzone"></a><a class="bds_tsina" data-cmd="tsina"></a><a class="bds_weixin" data-cmd="weixin"></a><a class="bds_more" data-cmd="more"></a></div><script>var share_excerpt = '【利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订】昨天又介绍了一次E5试用订阅！目前已知的经常使用Microsoft 365 API能实现订阅的续订！本文介绍一下不用“充元宝”，全靠手打的，散人全自动刷API方案！！原理：利用免费的Github Action 定期刷 Microsoft 36...';var share_pic = '';var share_url = 'https://51.ruyo.net/15646.html?fid=0';var wkey = '1833210419';var qkey = '101190611';window._bd_share_config = { common : { bdText : share_excerpt,bdDesc : share_excerpt,bdUrl : share_url, bdPic : share_pic, bdSnsKey : {'tsina':wkey, 'tqq':qkey,'qzone':qkey} }, share : [{ 'bdStyle' : 1, 'bdSize' : 24 }] };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];</script>					</div>
+					<div class="btn-group vote-group" data-votes-up="1" data-votes-down="0" data-vote-id="15646" data-vote-type="post" itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+<a href="javascript:;" class="btn btn-default up"><span class="glyphicon glyphicon-thumbs-up"></span> <span class="votes">1</span><div class="hide" itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating"><span itemprop="average">5</span><span itemprop="votes">1</span><span itemprop="count">55</span></div></a>
+<a href="javascript:;" class="btn btn-default down"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+</div><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://51.ruyo.net/" title="如有乐享" itemprop="url"><span itemprop="title">如有乐享</span></a></span> › <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90/" title="网络资源" itemprop="url"><span itemprop="title">网络资源</span></a></span> ›  › <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://51.ruyo.net/category/%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90/jiaocheng/" title="教程资源" itemprop="url"><span itemprop="title">教程资源</span></a></span> › <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://51.ruyo.net/category/not-show-homepage/" title="首页不显示" itemprop="url"><span itemprop="title">首页不显示</span></a></span> › <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://51.ruyo.net" title="文章" itemprop="url"><span itemprop="title">文章</span></a></span> › <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://51.ruyo.net/15646.html" title="利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订" itemprop="url"><span itemprop="title">利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订</span></a></span>				</div>
+				<div class="panel-footer profile clearfix" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+					<a class="author-avatar" href="https://51.ruyo.net/author/admin/">
+						<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=50&#038;d=monsterid&#038;r=g" class="avatar" width="50" height="50" />					</a>
+					<div class="author-description">
+						<div class="author-name"> 作者 : <span itemprop="name"><a href="https://51.RUYO.net" title="访问我是小马甲~的站点" rel="author external">我是小马甲~</a></span> </div>
+						<div itemprop="description">没有个人说明</div>
+					</div>
+				</div>
+			</div>
+			<nav class="pager" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<li class="previous"><a href="https://51.ruyo.net/16002.html" rel="prev"><span class="text-muted">上一篇：</span> <span itemprop="name">免费申请Microsoft 365 E5开发者试用订阅教程</span></a></li><li class="next"><a href="https://51.ruyo.net/15997.html" rel="next"><span class="text-muted">下一篇：</span> <span itemprop="name">腾讯云测评：1CPU/2G内存/5M带宽轻量应用云服务器</span></a></li>	</nav><!-- .navigation -->			<div class="panel panel-default"><div class="panel-body adsense">
+<!-- 评论上方的广告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2073396170871664"
+     data-ad-slot="5971711201"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>			<div class="panel panel-default" id="comments">
+<div class="list-group"  id="respond">
+	<h4 class="list-group-item">发表评论 <small id="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="/15646.html#respond" style="display:none;">点击这里取消回复。</a></small></h4>
+<p class="list-group-item">要发表评论，您必须先<a href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html%23respond">登录</a>。</p>
+</div>
+
+	<ul class="list-group commentlist">
+				<li class="list-group-item respond-title">55 Responses to &#8220;利用Github Actions刷Microsoft 365 E5开发者订阅API实现续订&#8221;</li>
+		<ul id="thread-comments">
+			<li class="comment even thread-even depth-1 list-group-item top" id="comment-40975" data-comment-id="40975">
+<div class="comment-votes vote-group" data-votes-up="4" data-votes-down="2" data-vote-id="40975" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">2</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >Joey</cite>		<div id="comment-content"><p>大佬，请问作者是不是删库了。最近也提示失败。还有新的方式吗？或者如果成为一个简单的但真正的开发者可以使用呢？</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2021-04-08" title="2021年4月8日 上午10:10">2021-04-08 10:10</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-36926" data-comment-id="36926">
+<div class="comment-votes vote-group" data-votes-up="4" data-votes-down="0" data-vote-id="36926" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">4</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >1T改为5T</cite>		<div id="comment-content"><p>开通后Onedrive默认只有1T，有需要的可以改成5T，官方教程：docs.microsoft.com/zh-cn/onedrive/change-user-storage</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2021-02-04" title="2021年2月4日 下午5:19">2021-02-04 17:19</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-35918" data-comment-id="35918">
+<div class="comment-votes vote-group" data-votes-up="3" data-votes-down="1" data-vote-id="35918" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">2</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >xxll</cite>		<div id="comment-content"><p>之前没问题, 最近一周出现错误<br />
+查看Push Changes 有红色叉:<br />
+Run ad-m/github-push-action@master<br />
+Error: Invalid status code &#039;404&#039; for url &#039;https://api.github.com/repos/xxll88/_AutoTeamData&#039;<br />
+    at IncomingMessage.&lt;anonymous&gt; (/home/runner/work/_actions/ad-m/github-push-action/master/start.js:14:21)<br />
+    at IncomingMessage.emit (events.js:215:7)<br />
+    at endReadableNT (_stream_readable.js:1184:12)<br />
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2021-01-06" title="2021年1月6日 下午4:10">2021-01-06 16:10</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-35829" data-comment-id="35829">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="35829" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >FRRYB</cite>		<div id="comment-content"><p>We are currently unable to download the log. Please try again later.</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2021-01-03" title="2021年1月3日 下午12:07">2021-01-03 12:07</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-35637" data-comment-id="35637">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="35637" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >yu</cite>		<div id="comment-content"><p>nameError: name &#039;secret&#039; is not defined</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-12-26" title="2020年12月26日 下午1:49">2020-12-26 13:49</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-35183" data-comment-id="35183">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="35183" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >marco</cite>		<div id="comment-content"><p>修改cron定时任务其实github里面有提示的，当你把光标移到cron那一行，会有一个浮窗告诉你这一句命令代表什么意思</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-12-22" title="2020年12月22日 上午11:15">2020-12-22 11:15</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-35182" data-comment-id="35182">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="35182" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >marco</cite>		<div id="comment-content"><p>修改1t为5t之后还是显示1t是因为修改只对修改后新增的用户生效，需要新建全局管理员然后登陆新管理员账号删除最开始的管理员账号，之后使用新创建的管理员账号，就ok了</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-12-22" title="2020年12月22日 上午11:03">2020-12-22 11:03</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-34483" data-comment-id="34483">
+<div class="comment-votes vote-group" data-votes-up="2" data-votes-down="1" data-vote-id="34483" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >w(ﾟДﾟ)w</cite>		<div id="comment-content"><p>为何我的项目有时间隔三小时，有时间隔6小时，7小时的也有，不是很稳定的刷新呢</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-11-26" title="2020年11月26日 下午3:50">2020-11-26 15:50</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-34423" data-comment-id="34423">
+<div class="comment-votes vote-group" data-votes-up="1" data-votes-down="0" data-vote-id="34423" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >Shepherd</cite>		<div id="comment-content"><p>厉害，第二次免费更新了。戒指到2021年3月！<img class="look" src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/look/xixi.gif" width="22" height="22" /></p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-11-24" title="2020年11月24日 下午10:33">2020-11-24 22:33</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-33867" data-comment-id="33867">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="33867" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >111</cite>		<div id="comment-content"><p>onedrive的空间只有1T</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-11-02" title="2020年11月2日 上午11:09">2020-11-02 11:09</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-33724" data-comment-id="33724">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="1" data-vote-id="33724" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">-1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >zeta</cite>		<div id="comment-content"><p>test  api  keyerror refresh_tokeb错误</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-10-23" title="2020年10月23日 下午12:26">2020-10-23 12:26</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-33590" data-comment-id="33590">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="33590" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >koko</cite>		<div id="comment-content"><p>折腾了一晚上，已经搭建并运行成功<br />
+但是目前并未续期成功，剩余17天过期，看能不能续期成功，啥时候续期成功了</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-10-15" title="2020年10月15日 下午2:55">2020-10-15 14:55</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-33316" data-comment-id="33316">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="33316" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >Chous的马甲</cite>		<div id="comment-content"><p>连做两个，一气呵成，现在就是看后面的结果了，谢谢分享</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-09-27" title="2020年9月27日 下午3:37">2020-09-27 15:37</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-32693" data-comment-id="32693">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="32693" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >Summer</cite>		<div id="comment-content"><p>希望出个群晖的教程</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-09-09" title="2020年9月9日 上午10:49">2020-09-09 10:49</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item parent top" id="comment-32364" data-comment-id="32364">
+<div class="comment-votes vote-group" data-votes-up="1" data-votes-down="0" data-vote-id="32364" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >Test API前面是小红叉</cite>		<div id="comment-content"><p>大神你好，我按照你的教程做好了。在配置参数在线编辑项目里的1.txt 文件，将整个refresh_token覆盖粘贴进去（原内容不要保留）这个过程中，我无法把原内容删除，好像原内容也是一个refresh_token。 现在的问题就是在Auto Api Secret / build中，Test API前面是小红叉，请问怎么解决？谢谢了。</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-08-22" title="2020年8月22日 下午10:20">2020-08-22 22:20</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor odd alt depth-2 list-group-item" id="comment-32383" data-comment-id="32383">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>具体错误信息是啥？</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-08-24" title="2020年8月24日 上午9:31">2020-08-24 09:31</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 list-group-item parent top" id="comment-32218" data-comment-id="32218">
+<div class="comment-votes vote-group" data-votes-up="2" data-votes-down="1" data-vote-id="32218" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >child</cite>		<div id="comment-content"><p>我写了个asp .net core 环境的有需要可以自己下载发布(在appsettings.json文件简单配置就可以用) https://github.com/childedu/office.E5</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-08-13" title="2020年8月13日 下午3:04">2020-08-13 15:04</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment odd alt depth-2 list-group-item parent" id="comment-32221" data-comment-id="32221">
+	<div id="comment-body">
+				<div id="comment-content"><p>大佬，可以问下吗，这一步./rclone authorize &quot;onedrive&quot; 提示不是内部或外部命令，也不是可运行的程序或批处理文件。这要怎么弄。</p>
+</div>
+		<div id="comment-meta">
+			<cite >Iota</cite>			<time datetime="2020-08-13" title="2020年8月13日 下午7:13">2020-08-13 19:13</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor even depth-3 list-group-item parent" id="comment-32226" data-comment-id="32226">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>仔细看一下第7步，需要在rclone.exe同目录中，按Shift+鼠标右键，选择在【此处打开cmd窗口】或【在此处打开power shell窗口】</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-08-13" title="2020年8月13日 下午9:57">2020-08-13 21:57</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment odd alt depth-4 list-group-item" id="comment-32254" data-comment-id="32254">
+	<div id="comment-body">
+				<div id="comment-content"><p>谢谢大佬，不会代码，只会看你教程。。试了好久才行</p>
+</div>
+		<div id="comment-meta">
+			<cite >Iota</cite>			<time datetime="2020-08-15" title="2020年8月15日 下午5:40">2020-08-15 17:40</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even depth-3 list-group-item" id="comment-32239" data-comment-id="32239">
+	<div id="comment-body">
+				<div id="comment-content"><p>power shell窗口在前目录运行示例是：./rclone authorize &quot;onedrive&quot;<br />
+cmd窗口在前目录运行示例是：rclone authorize &quot;onedrive&quot;<br />
+重点要去到rclone .exe文件所在目录</p>
+</div>
+		<div id="comment-meta">
+			<cite >child</cite>			<time datetime="2020-08-14" title="2020年8月14日 上午11:02">2020-08-14 11:02</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment byuser comment-author-admin bypostauthor odd alt depth-2 list-group-item" id="comment-32225" data-comment-id="32225">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>谢谢大佬分享！！</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-08-13" title="2020年8月13日 下午9:56">2020-08-13 21:56</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-32138" data-comment-id="32138">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="32138" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >wansyu</cite>		<div id="comment-content"><p>这几天开始刷不了了，之前还正常的<br />
+Run failed for master (9c6f4f0)<br />
+Repository: wansyu/_AutoApiSecret<br />
+Workflow: Auto Api Secret<br />
+Duration: 31.0 seconds<br />
+Finished: 2020-08-08 00:46:23 UTC</p>
+<p>View results</p>
+<p>Jobs:<br />
+build failed (1 annotation)</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-08-08" title="2020年8月8日 下午1:37">2020-08-08 13:37</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item top" id="comment-31781" data-comment-id="31781">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31781" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >小白</cite>		<div id="comment-content"><p>小白一步步操作成功了，等最后看看有没有续期成功，感谢！</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-07-19" title="2020年7月19日 下午1:24">2020-07-19 13:24</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-31390" data-comment-id="31390">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31390" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >pydh111</cite>		<div id="comment-content"><p>已成功搭建。   目前还未续期，剩余体验时间85天</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-20" title="2020年6月20日 上午11:21">2020-06-20 11:21</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item parent top" id="comment-31334" data-comment-id="31334">
+<div class="comment-votes vote-group" data-votes-up="2" data-votes-down="0" data-vote-id="31334" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">2</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >紫藤</cite>		<div id="comment-content"><p>辛苦辛苦，已经成功了，想问三个问题：<br />
+1. rclone成功后，还需要吗？是否可以在本地删掉？<br />
+2. Github这个一直调用，按着文章里说的，会不会因为时间等原因被停掉呀？<br />
+3. 调用别人的Github这个，如果往OneDrive里存东西，会有被看到的可能性吗？<br />
+小白不懂，求问，再次感谢。</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-16" title="2020年6月16日 下午3:44">2020-06-16 15:44</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor even depth-2 list-group-item parent" id="comment-31336" data-comment-id="31336">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>1) rclone 为了获取token, 可删！<br />
+2）除非微软或者Github Action宕机！<br />
+3）私有项目，别人看不见。</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-06-16" title="2020年6月16日 下午5:10">2020-06-16 17:10</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment odd alt depth-3 list-group-item" id="comment-31341" data-comment-id="31341">
+	<div id="comment-body">
+				<div id="comment-content"><p>谢谢谢谢，坐等结果了，但愿能成功。</p>
+</div>
+		<div id="comment-meta">
+			<cite >紫藤</cite>			<time datetime="2020-06-16" title="2020年6月16日 下午8:05">2020-06-16 20:05</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even depth-3 list-group-item parent" id="comment-32151" data-comment-id="32151">
+	<div id="comment-body">
+				<div id="comment-content"><p>大佬，想问一下，这个可以续期E3吗？想弄个带Visio或者project的。</p>
+</div>
+		<div id="comment-meta">
+			<cite >紫藤</cite>			<time datetime="2020-08-09" title="2020年8月9日 上午8:38">2020-08-09 08:38</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor odd alt depth-4 list-group-item parent" id="comment-32164" data-comment-id="32164">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>这个订阅不支持Visio或Project吧</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-08-10" title="2020年8月10日 上午9:40">2020-08-10 09:40</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment even depth-5 list-group-item" id="comment-32346" data-comment-id="32346">
+	<div id="comment-body">
+				<div id="comment-content"><span class="top-level">回复我是小马甲~ :</span> <p>显示成功了，但愿能一直用<img class="look" src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/look/kelian.gif" width="22" height="22" /></p>
+</div>
+		<div id="comment-meta">
+			<cite >紫藤</cite>			<time datetime="2020-08-21" title="2020年8月21日 下午2:36">2020-08-21 14:36</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt depth-5 list-group-item" id="comment-32347" data-comment-id="32347">
+	<div id="comment-body">
+				<div id="comment-content"><span class="top-level">回复我是小马甲~ :</span> <p>自动订阅邮件通知成功了，谢谢</p>
+</div>
+		<div id="comment-meta">
+			<cite >紫藤</cite>			<time datetime="2020-08-21" title="2020年8月21日 下午2:37">2020-08-21 14:37</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item parent top" id="comment-31331" data-comment-id="31331">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31331" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >hjy</cite>		<div id="comment-content"><p>请教下，这里报错没事吧？<br />
+Push changes<br />
+  error: failed to push some refs to &#039;https://github.com/houjunyong/Action.git&#039;<br />
+Error: Invalid status code: 1<br />
+    at ChildProcess.&lt;anonymous&gt; (/home/runner/work/_actions/ad-m/github-push-action/master/start.js:9:19)<br />
+Error: Invalid status code: 1<br />
+    at ChildProcess.&lt;anonymous&gt; (/home/runner/work/_actions/ad-m/github-push-action/master/start.js:9:19)</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-16" title="2020年6月16日 上午10:14">2020-06-16 10:14</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment odd alt depth-2 list-group-item" id="comment-31350" data-comment-id="31350">
+	<div id="comment-body">
+				<div id="comment-content"><p>前几次错误，后来自己好了。</p>
+</div>
+		<div id="comment-meta">
+			<cite >hjy</cite>			<time datetime="2020-06-17" title="2020年6月17日 上午9:35">2020-06-17 09:35</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 list-group-item top" id="comment-31324" data-comment-id="31324">
+<div class="comment-votes vote-group" data-votes-up="1" data-votes-down="0" data-vote-id="31324" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >FE_Harry</cite>		<div id="comment-content"><p>申请订阅 续订 一气呵成 老大辛苦了<img class="look" src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/look/taikaixin.gif" width="22" height="22" /></p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-15" title="2020年6月15日 下午6:35">2020-06-15 18:35</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-even depth-1 list-group-item top" id="comment-31310" data-comment-id="31310">
+<div class="comment-votes vote-group" data-votes-up="2" data-votes-down="1" data-vote-id="31310" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >ahah</cite>		<div id="comment-content"><p>不知道能不能续订，看看吧，我调成了5分钟一次，一次调用80轮</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-14" title="2020年6月14日 下午12:29">2020-06-14 12:29</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 list-group-item top" id="comment-31304" data-comment-id="31304">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31304" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >竹林里有冰</cite>		<div id="comment-content"><p>Failure!</p>
+<p>Error: Auth Error</p>
+<p>Description: No code returned by remote server</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-13" title="2020年6月13日 下午7:42">2020-06-13 19:42</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-even depth-1 list-group-item top" id="comment-31297" data-comment-id="31297">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31297" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >xuemouren</cite>		<div id="comment-content"><p>只有我自己下载不下来那个软件吗</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-13" title="2020年6月13日 上午10:20">2020-06-13 10:20</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 list-group-item parent top" id="comment-31285" data-comment-id="31285">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="1" data-vote-id="31285" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">-1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >密碼重改,也無法登入</cite>		<div id="comment-content"><p>Failure!</p>
+<p>Error: Auth Error</p>
+<p>Description: No code returned by remote server<br />
+[淚]</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-12" title="2020年6月12日 下午12:38">2020-06-12 12:38</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment odd alt depth-2 list-group-item" id="comment-31305" data-comment-id="31305">
+	<div id="comment-body">
+				<div id="comment-content"><p>第三张图上面的，任何组织和目录那个选项你没有勾选，返回去检查下项目</p>
+</div>
+		<div id="comment-meta">
+			<cite >test</cite>			<time datetime="2020-06-13" title="2020年6月13日 下午11:20">2020-06-13 23:20</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item top" id="comment-31284" data-comment-id="31284">
+<div class="comment-votes vote-group" data-votes-up="1" data-votes-down="0" data-vote-id="31284" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >MarcusPierce</cite>		<div id="comment-content"><p>Action中的运行日志  Push changes 出现错误，原因未知</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-12" title="2020年6月12日 上午11:57">2020-06-12 11:57</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item parent top" id="comment-31283" data-comment-id="31283">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31283" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >MarcusPierce</cite>		<div id="comment-content"><p>Actionz中的运行日志 Push changes 出现错误<br />
+“To https://github.com/MarcusPierce/AutoApiSecret.git<br />
+ ! [rejected]        HEAD -&gt; master (fetch first)<br />
+error: failed to push some refs to &#039;https://github.com/MarcusPierce/AutoApiSecret.git&#039;<br />
+hint: Updates were rejected because the remote contains work that you do<br />
+hint: not have locally. This is usually caused by another repository pushing<br />
+hint: to the same ref. You may want to first integrate the remote changes<br />
+hint: (e.g., &#039;git pull ...&#039;) before pushing again.<br />
+hint: See the &#039;Note about fast-forwards&#039; in &#039;git push --help&#039; for details.<br />
+Error: Invalid status code: 1<br />
+    at ChildProcess.&lt;anonymous&gt; (/home/runner/work/_actions/ad-m/github-push-action/master/start.js:9:19)<br />
+    at ChildProcess.emit (events.js:210:5)<br />
+    at maybeClose (internal/child_process.js:1021:16)<br />
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5) {<br />
+  code: 1<br />
+}<br />
+Error: Invalid status code: 1<br />
+    at ChildProcess.&lt;anonymous&gt; (/home/runner/work/_actions/ad-m/github-push-action/master/start.js:9:19)<br />
+    at ChildProcess.emit (events.js:210:5)<br />
+    at maybeClose (internal/child_process.js:1021:16)<br />
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)”</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-12" title="2020年6月12日 上午11:56">2020-06-12 11:56</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor even depth-2 list-group-item parent" id="comment-31287" data-comment-id="31287">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>文中配置参数，第三小节。仔细看看！</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-06-12" title="2020年6月12日 下午1:50">2020-06-12 13:50</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment odd alt depth-3 list-group-item" id="comment-31289" data-comment-id="31289">
+	<div id="comment-body">
+				<div id="comment-content"><p>GITHUB_TOKEN生成之后需要做其他事情吗，文中没有说明得到的TOKEN需要填入哪儿</p>
+</div>
+		<div id="comment-meta">
+			<cite >MarcusPierce</cite>			<time datetime="2020-06-12" title="2020年6月12日 下午2:36">2020-06-12 14:36</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 list-group-item parent top" id="comment-31281" data-comment-id="31281">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="1" data-vote-id="31281" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">-1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >hugo</cite>		<div id="comment-content"><p>怎么看有没有续订成功?</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-12" title="2020年6月12日 上午11:05">2020-06-12 11:05</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor odd alt depth-2 list-group-item" id="comment-31286" data-comment-id="31286">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>快到期的时候会有邮件通知是否续订</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-06-12" title="2020年6月12日 下午1:48">2020-06-12 13:48</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 list-group-item parent top" id="comment-31268" data-comment-id="31268">
+<div class="comment-votes vote-group" data-votes-up="1" data-votes-down="4" data-vote-id="31268" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">-3</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite ><a href="http://smooc.xyz" rel="external nofollow" target="_blank">蔡徐坤</a></cite>		<div id="comment-content"><p>（第7步，利用rclone来获取Token!）<br />
+到这步时，返回的是Failure！<br />
+请问是什么原因？</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-11" title="2020年6月11日 下午6:38">2020-06-11 18:38</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor odd alt depth-2 list-group-item" id="comment-31272" data-comment-id="31272">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>检查执行的命令 空格？双引号？检测应用ID和密码 是不是不对</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-06-11" title="2020年6月11日 下午7:20">2020-06-11 19:20</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+<li class="comment even depth-2 list-group-item" id="comment-31300" data-comment-id="31300">
+	<div id="comment-body">
+				<div id="comment-content"><p>创建应用程序的时候要选择 任何组织目录的账号都可以使用</p>
+</div>
+		<div id="comment-meta">
+			<cite >BigHuang</cite>			<time datetime="2020-06-13" title="2020年6月13日 下午2:17">2020-06-13 14:17</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-even depth-1 list-group-item parent top" id="comment-31267" data-comment-id="31267">
+<div class="comment-votes vote-group" data-votes-up="1" data-votes-down="0" data-vote-id="31267" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">1</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite ><a href="http://www.sqyai.com" rel="external nofollow" target="_blank">情醉中国风</a></cite>		<div id="comment-content"><p>昨天我也跟下面那位大兄弟一样，一步步查了两遍都没发现哪里不对，然后看了下无图的Githb原文，写的是id=r&#039;&#039;和secert=&#039;&#039;我悟了</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-11" title="2020年6月11日 下午6:05">2020-06-11 18:05</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor even depth-2 list-group-item" id="comment-31271" data-comment-id="31271">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p><img class="look" src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/look/landelini.gif" width="22" height="22" /> 对不住大胸弟了！已经换上高清无码图！</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-06-11" title="2020年6月11日 下午7:18">2020-06-11 19:18</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 list-group-item parent top" id="comment-31262" data-comment-id="31262">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31262" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >PRStarDust</cite>		<div id="comment-content"><p>弄完了，然后发现我不知道申请一个e5用来干嘛<img class="look" src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/look/lei.gif" width="22" height="22" />不过还是感谢帖主</p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-11" title="2020年6月11日 下午3:57">2020-06-11 15:57</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor even depth-2 list-group-item" id="comment-31263" data-comment-id="31263">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p>OneDrive网盘和Office365桌面版</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-06-11" title="2020年6月11日 下午4:37">2020-06-11 16:37</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-even depth-1 list-group-item parent top" id="comment-31259" data-comment-id="31259">
+<div class="comment-votes vote-group" data-votes-up="0" data-votes-down="0" data-vote-id="31259" >
+<a href="javascript:;" class="up"><span class="glyphicon glyphicon-chevron-up"></span> <span class="votes">0</span></a>
+<a href="javascript:;" class="down"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>	<div id="comment-body">
+		<cite >不得不说有坑</cite>		<div id="comment-content"><p>CONFIG_ID、CONFIG_KEY，你那张图的光标，正好把最后的&#039;给挡住，害得我这2参数都少打了个&#039;，折腾了一天才发现<img class="look" src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/look/bishi.gif" width="22" height="22" /></p>
+</div>
+		<div id="comment-meta">
+						<time datetime="2020-06-11" title="2020年6月11日 上午11:23">2020-06-11 11:23</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a>		</div>
+		</div>
+</li>
+<ul class="children">
+<li class="comment byuser comment-author-admin bypostauthor even depth-2 list-group-item" id="comment-31261" data-comment-id="31261">
+	<a id="comment-author" href="https://51.ruyo.net/author/admin/">
+		<img src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://secure.gravatar.com/avatar/dfa45a82b261c63a5b0107a0a1a3f292?s=30&#038;d=monsterid&#038;r=g" class="avatar" width="30" height="30" />	</a>
+	<div id="comment-body">
+				<div id="comment-content"><p><img class="look" src="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/grey.png" data-original="https://51.ruyo.net/wp-content/themes/dmeng2.0/images/look/kelian.gif" width="22" height="22" /> 哦~ 上面贴的代码出现了其他标签内容，已经修改！</p>
+</div>
+		<div id="comment-meta">
+			<cite class="fn" ><a href="https://51.RUYO.net" rel="external nofollow" target="_blank">我是小马甲~</a></cite>			<time datetime="2020-06-11" title="2020年6月11日 下午1:58">2020-06-11 13:58</time>
+			<a rel="nofollow" class="comment-reply-login" href="https://51.ruyo.net/wp-login.php?redirect_to=https%3A%2F%2F51.ruyo.net%2F15646.html"><span class="glyphicon glyphicon-transfer"></span>登录以回复</a><a class="pm" href="https://51.ruyo.net/author/admin/?tab=message" title="私信" target="_blank"><span class="glyphicon glyphicon-share-alt"></span>私信</a>		</div>
+		</div>
+</li>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		</ul>
+	</ul>
+	
+</div>
+					 </article><!-- #content -->
+		<div id="sidebar" class="col-lg-4 col-md-4" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+	<aside id="text-30" class="panel panel-default widget clearfix widget_text">			<div class="textwidget"><a href="http://51.ruyo.net/tgchannel" target="_blank" title="telegram群组">TG广播</a> /  <a href="https://51.ruyo.net/get-our-team/" target="_blank" title="寻找组织">寻找组织 </a>/ <a href="http://51.ruyo.net/about/#3" target="_blank" title="公告">公告 </a>/ <a href="http://51.ruyo.net/feed" target="_blank" title="订阅">RSS订阅</a>
+<br/>
+<p><b>庆六一，高考，香港回归！本博已经关闭评论！</b></p></div>
+		</aside><aside id="text-16" class="panel panel-default widget clearfix widget_text">			<div class="textwidget"><a href="http://51.ruyo.net/vultr11" target="_blank" title="VULTR - 最低月付2.5刀，支持日本/洛杉矶"><span class="glyphicon glyphicon-hand-right"></span> VULTR - 最低月付2.5刀，支持日本/洛杉矶 </a><br>
+<a href="http://51.ruyo.net/bwg" target="_blank" title="搬瓦工CN2直连 -优惠码:BWHNY2022"><span class="glyphicon glyphicon-hand-right"></span> 搬瓦工 - 12.22%的优惠码：BWHNY2022</a><br>
+<a href="http://51.ruyo.net/linode" target="_blank" title="Linode - 最低月付5刀，注册送20刀"><span class="glyphicon glyphicon-hand-right"></span> Linode - 月付5刀，新注册注册送20刀</a>
+<br>
+<a href="https://51.ruyo.net/kryptcloud" target="_blank" title="iON cloud - 新加坡/洛杉矶服务器+虚拟主机"><span class="glyphicon glyphicon-hand-right"></span> iON cloud - 新加坡/洛杉矶服务器+虚拟主机</a></div>
+		</aside><aside id="recent-comments-4" class="panel panel-default widget clearfix widget_recent_comments"><h3 class="panel-heading widget-title">近期评论</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">dengyong</span>发表在《<a href="https://51.ruyo.net/17163.html/#comment-43223">甲骨文云(Oracle Cloud)免费开通ARM云服务器</a>》</li><li class="recentcomments"><span class="comment-author-link">马灼堂</span>发表在《<a href="https://51.ruyo.net/17163.html/#comment-43189">甲骨文云(Oracle Cloud)免费开通ARM云服务器</a>》</li><li class="recentcomments"><span class="comment-author-link">chahu</span>发表在《<a href="https://51.ruyo.net/17163.html/#comment-43173">甲骨文云(Oracle Cloud)免费开通ARM云服务器</a>》</li><li class="recentcomments"><span class="comment-author-link"><a href='https://simplove.me' rel='external nofollow' class='url'>Jacklove</a></span>发表在《<a href="https://51.ruyo.net/17163.html/#comment-43169">甲骨文云(Oracle Cloud)免费开通ARM云服务器</a>》</li><li class="recentcomments"><span class="comment-author-link">emmm</span>发表在《<a href="https://51.ruyo.net/16250.html/#comment-43163">Money Yandex 万事达实体卡申请实战教程</a>》</li></ul></aside>		<aside id="recent-posts-4" class="panel panel-default widget clearfix widget_recent_entries">		<h3 class="panel-heading widget-title">最新文章</h3>		<ul>
+											<li>
+					<a href="https://51.ruyo.net/17687.html">RunAsDate.exe一款可修改软件系统时间，实现软“破解”（含源码）</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17684.html">电信天浙卡19元/月：65G全国流量+30G定向流量+100分钟通话</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17666.html">XShell最新免费版已不再限制4个标签页，但是退出会弹窗，附解决方案！</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17657.html">微信公众号送我价值10000元的微信红包封面，见者有份！</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17650.html">电信长期纯流量天彩卡 29元/月：每月包含70G全国流量+30G定向流量</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17646.html">夸克网盘完成学生认证仅10.9元/年即可享受会员服务</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17625.html">华为云领取1010元代金券，白嫖9个月服务器，老用户可上车！速度！</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17617.html">中国电信长期流量卡29元/月：每月含95G流量，不返费不参加活动</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17611.html">体验Navicat Premium 16，无限重置试用14天方法(附源码)</a>
+									</li>
+											<li>
+					<a href="https://51.ruyo.net/17604.html">给自己的网站换个圣诞节的气氛背景&#x1f384;&#x1f385;</a>
+									</li>
+					</ul>
+		</aside><aside id="rss-11" class="panel panel-default widget clearfix widget_rss"><h3 class="panel-heading widget-title"><a class="rsswidget" href="https://jike.info/category/5.rss?uid=6&#038;token=c5cd3a8d-a15d-4b13-9383-43400d0e092b"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="https://51.ruyo.net/wp-includes/images/rss.png" alt="RSS" /></a> <a class="rsswidget" href="https://jike.info/category/5">优惠活动</a></h3><ul><li><a class='rsswidget' href='https://jike.info/topic/5961/%E9%9B%86%E4%B8%AD%E5%B8%96-%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E6%8C%82%E6%9C%BA%E5%8F%91%E5%B8%83%E5%B8%96'>#集中帖# 腾讯会议挂机发布帖</a></li><li><a class='rsswidget' href='https://jike.info/topic/8642/%E5%93%AA%E4%B8%AA%E5%9F%9F%E5%90%8D%E5%95%86%E7%9A%84org%E5%92%8Cink%E5%9F%9F%E5%90%8D%E6%9C%80%E4%BE%BF%E5%AE%9C'>哪个域名商的org和ink域名最便宜</a></li><li><a class='rsswidget' href='https://jike.info/topic/8639/%E6%97%A9%E6%99%9A%E9%83%BD%E4%BC%9A%E6%9D%A5-%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98vip%E6%9D%A5%E4%BA%86'>早晚都会来，阿里云盘VIP来了！</a></li><li><a class='rsswidget' href='https://jike.info/topic/8636/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98%E4%BC%9A%E5%91%98%E6%9D%A5%E4%BA%86-1%E5%91%A8%E5%B9%B4%E9%80%81%E4%BC%9A%E5%91%98%E6%B4%BB%E5%8A%A8'>阿里云盘会员来了！（1周年送会员活动）</a></li><li><a class='rsswidget' href='https://jike.info/topic/8621/%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E6%98%9F%E8%BE%B0%E5%8D%A1-19%E5%85%83-%E6%9C%88%E5%90%AB50g%E9%80%9A%E7%94%A8%E6%B5%81%E9%87%8F-30g%E5%AE%9A%E5%90%91%E6%B5%81%E9%87%8F-50%E5%88%86%E9%92%9F%E9%80%9A%E8%AF%9D'>中国移动星辰卡 19元&#x2F;月含50G通用流量+30G定向流量+50分钟通话</a></li></ul></aside><aside id="calendar-3" class="panel panel-default widget clearfix widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2022年二月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://51.ruyo.net/date/2022/01/">&laquo; 1月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td><a href="https://51.ruyo.net/date/2022/02/19/" aria-label="于2022年2月19日上发布的文章">19</a></td><td>20</td>
+	</tr>
+	<tr>
+		<td><a href="https://51.ruyo.net/date/2022/02/21/" aria-label="于2022年2月21日上发布的文章">21</a></td><td>22</td><td>23</td><td>24</td><td><a href="https://51.ruyo.net/date/2022/02/25/" aria-label="于2022年2月25日上发布的文章">25</a></td><td id="today">26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td class="pad" colspan="6">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside></div><!-- #sidebar -->
+	</div>
+ </div><!-- #main -->
+<footer id="colophon" class="container" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+	<div class="panel panel-default text-muted">
+		<div class="panel-body">
+<aside id="analytics-8" class="widget clearfix footer-widget widget_analytics"><ul><li class="update">统计时间 : <time title="统计数据最后更新时间：2022-02-26 11:33:42 ">02-26 11:33</time></li><li>文章 : 1456</li><li>分类 : 37</li><li>标签 : 4113</li><li>用户 : 29592</li><li>评论 : 13994</li><li>浏览总数 : 34984265</li><li>搜索次数 : 598643</li></ul></aside><!-- cached 2022-02-26 11:33:42 -->		</div>
+		<div class="panel-footer clearfix">
+			&copy; 2022 <a href="https://51.ruyo.net/">如有乐享</a> 版权所有 <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备14015671号-1</a><script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?c70a69acf0b514c5188637d9429438b6":"https://jspassport.ssl.qhimg.com/11.0.1.js?c70a69acf0b514c5188637d9429438b6";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?0bd90052898d11e61495657b34d773e3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 
+<script>
+var check = (function () {
+            var callbacks = [], timeLimit = 50, open = false;
+            setInterval(loop, 1);
+            return {
+                addListener: function (fn) {
+                    callbacks.push(fn);
+                },
+                cancleListenr: function (fn) {
+                    callbacks = callbacks.filter(function (v) {
+                        return v !== fn;
+                    });
+                }
+            }
+            function loop() {
+                var startTime = new Date();
+                debugger;
+                if (new Date() - startTime > timeLimit) {
+                    if (!open) {
+                        callbacks.forEach(function (fn) {
+                            fn.call(null);
+                        });
+                    }
+                    open = true;
+                    window.stop();
+                } else {
+                    open = false;
+                }
+            }
+        })();
+
+        check.addListener(function () {
+            window.location.reload();
+        });
+</script> -->
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-144188525-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Baidu Auto Push -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Auto Push -->
+
+
+
+<script>
+
+    jQuery("#christmas").click(function(){
+        jQuery(this).hide()
+    })
+    for(i=1;i<=200;i++){
+    top1=900+Math.ceil(Math.random()*100); 
+    left=1+Math.ceil(Math.random()*99); 
+    src=Math.ceil(Math.random()*4); 
+    s=5+Math.random()*13; 
+
+    h=3+Math.ceil(Math.random()*10); 
+    console.log(src)
+    newf=jQuery('<div class="flake"></div>').css({
+      "-webkit-animation-duration":s+"s",
+      "-moz-animation-duration":s+"s",
+      "-ms-animation-duration":s+"s",
+      "-o-animation-duration":s+"s",
+      "animation-duration":s+"s",
+    "margin-top":top1+"px",
+    "border-radius":100+"px",
+    "background":"white",
+    "width":h+"px",
+    "height":h+"px",
+    "left":left+"%",
+    "z-index":"1",
+  })
+    jQuery("#christmas").append(newf);
+  }
+  for(i=1;i<=50;i++){
+    top1=900+Math.ceil(Math.random()*100); 
+    
+    left=1+Math.ceil(Math.random()*99); 
+    src=Math.ceil(Math.random()*4); 
+    s=5+Math.random()*13; 
+    h=20+Math.ceil(Math.random()*30); 
+    console.log(src)
+    newf=jQuery('<div class="flake">'
+      +'<img src="https://www.chinaredflag.cn/a_data/image/'+src+'.png" style="width:100%">'
+      +'</div>').css({
+      "-webkit-animation-duration":s+"s",
+      "-moz-animation-duration":s+"s",
+      "-ms-animation-duration":s+"s",
+      "-o-animation-duration":s+"s",
+      "animation-duration":s+"s",
+    "margin-top":top1+"px",
+    "border-radius":100+"px",
+    "width":h+"px",
+    "left":left+"%",
+    "z-index":"1",
+
+  })
+    jQuery("#christmas").append(newf);
+  }
+
+</script>
+
+
+
+
+
+
+
+		</div>
+	</div>
+</footer>
+<div class="btn-group-vertical floatButton"><button type="button" class="btn btn-default" id="goTop" title="去顶部"><span class="glyphicon glyphicon-arrow-up"></span></button><button type="button" class="btn btn-default" id="refresh" title="刷新"><span class="glyphicon glyphicon-repeat"></span></button><button type="button" class="btn btn-default" id="goComments" title="评论"><span class="glyphicon glyphicon-align-justify"></span></button><button type="button" class="btn btn-default" id="goBottom" title="去底部"><span class="glyphicon glyphicon-arrow-down"></span></button></div><link rel='stylesheet' id='yarppRelatedCss-css'  href='https://51.ruyo.net/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.0.3' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ratingsL10n = {"plugin_url":"https:\/\/51.ruyo.net\/wp-content\/plugins\/wp-postratings","ajax_url":"https:\/\/51.ruyo.net\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 item at a time.","image":"stars_crystal","image_ext":"gif","max":"5","show_loading":"0","show_fading":"0","custom":"0"};
+var ratings_mouseover_image=new Image();ratings_mouseover_image.src="https://51.ruyo.net/wp-content/plugins/wp-postratings/images/stars_crystal/rating_over.gif";;
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://51.ruyo.net/wp-content/plugins/wp-postratings/js/postratings-js.js?ver=1.86.2'></script>
+<script type='text/javascript' src='https://51.ruyo.net/wp-includes/js/wp-embed.min.js?ver=5.0.3'></script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 1.203 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-02-26 12:09:50 -->
+
+<!-- Super Cache dynamic page detected but late init not set. See the readme.txt for further details. -->
+<!-- Dynamic Super Cache -->
+<!-- Compression = gzip -->
